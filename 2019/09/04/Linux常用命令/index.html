@@ -55,32 +55,33 @@
   };
 </script>
 
-  <meta name="description" content="沉迷学习，日渐消瘦～(｡ì _ í｡)～">
-<meta name="keywords" content="Java, Spring, Linux">
-<meta property="og:type" content="website">
-<meta property="og:title" content="荼荼小蘼">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="本文收录了Linux系统中的常用命令，便于自己查阅，会不定期更新哈。 文件系统处理文件123456789101112131415# 创建空文件touch filename; # 复制文件cp source destination; # 链接文件ln filename link_filename; # 相当于文件的快捷方式，删除链接文件不会影响远文件#重命名文件mv oldname newname;">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="http://yoursite.com/2019/09/04/Linux常用命令/index.html">
 <meta property="og:site_name" content="荼荼小蘼">
-<meta property="og:description" content="沉迷学习，日渐消瘦～(｡ì _ í｡)～">
+<meta property="og:description" content="本文收录了Linux系统中的常用命令，便于自己查阅，会不定期更新哈。 文件系统处理文件123456789101112131415# 创建空文件touch filename; # 复制文件cp source destination; # 链接文件ln filename link_filename; # 相当于文件的快捷方式，删除链接文件不会影响远文件#重命名文件mv oldname newname;">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-09-04T16:00:31.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="荼荼小蘼">
-<meta name="twitter:description" content="沉迷学习，日渐消瘦～(｡ì _ í｡)～">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="twitter:title" content="Linux常用命令">
+<meta name="twitter:description" content="本文收录了Linux系统中的常用命令，便于自己查阅，会不定期更新哈。 文件系统处理文件123456789101112131415# 创建空文件touch filename; # 复制文件cp source destination; # 链接文件ln filename link_filename; # 相当于文件的快捷方式，删除链接文件不会影响远文件#重命名文件mv oldname newname;">
+  <link rel="canonical" href="http://yoursite.com/2019/09/04/Linux常用命令/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>荼荼小蘼</title>
+  <title>Linux常用命令 | 荼荼小蘼</title>
   
 
 
@@ -221,12 +222,13 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+
   <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/04/Linux常用命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -239,9 +241,8 @@
       <meta itemprop="name" content="荼荼小蘼">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/04/Linux常用命令/" class="post-title-link" itemprop="url">Linux常用命令</a>
+        <h2 class="post-title" itemprop="name headline">Linux常用命令
+
           
         </h2>
 
@@ -296,7 +297,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>本文收录了Linux系统中的常用命令，便于自己查阅，会不定期更新哈。</p>
+        <p>本文收录了Linux系统中的常用命令，便于自己查阅，会不定期更新哈。</p>
 <h1 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h1><h2 id="处理文件"><a href="#处理文件" class="headerlink" title="处理文件"></a>处理文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建空文件</span></span><br><span class="line">touch filename; </span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制文件</span></span><br><span class="line">cp <span class="built_in">source</span> destination; </span><br><span class="line"></span><br><span class="line"><span class="comment"># 链接文件</span></span><br><span class="line">ln filename link_filename; <span class="comment"># 相当于文件的快捷方式，删除链接文件不会影响远文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#重命名文件</span></span><br><span class="line">mv oldname newname; <span class="comment"># 亦用于移动文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除文件</span></span><br><span class="line">rm -rf filename; <span class="comment"># -r递归删除该目录下包含的子目录中的文件, -f强制删除文件，不做提示</span></span><br><span class="line">rm -i filename; <span class="comment"># -i提示是否真的要删除文件，删除敏感文件时建议使用这个参数，避免误删</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="处理目录"><a href="#处理目录" class="headerlink" title="处理目录"></a>处理目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建目录</span></span><br><span class="line">mkdir dirName; </span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除目录</span></span><br><span class="line">rmdir dirName; <span class="comment"># 只能删除空目录</span></span><br><span class="line">rm -r dirName; <span class="comment"># 递归删除目录</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换目录</span></span><br><span class="line"><span class="built_in">cd</span> destination; </span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示文件和目录列表</span></span><br><span class="line">ls -a; <span class="comment"># -a显示所有文件，包括隐藏文件</span></span><br><span class="line">ls -l; <span class="comment"># -l显示长列表，包含了目录中每个文件的更多相关信息</span></span><br><span class="line">ls -R; <span class="comment"># -R递归显示当前目录下包含的子目录中的文件</span></span><br><span class="line">ls -l my*; <span class="comment"># 显示当前目录下，以my开头的文件/文件夹</span></span><br></pre></td></tr></table></figure>
@@ -318,174 +319,58 @@
 
 <p>最后，如果想不起来某个命令怎么用了，man一下看下文档就好啦～</p>
 
-        
-      
     </div>
 
     
     
     
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/uploads/wechat-qcode.jpg" alt="Isabella Ling wechat" style="width: 200px; max-width: 100%;">
+  <div>Subscribe to my blog by scanning my public wechat account.</div>
+</div>
+
+      
+        
+      
+
       <footer class="post-footer">
-          <div class="post-eof"></div>
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/20/Linux-Mosh/" rel="next" title="Linux-Mosh安装">
+                  <i class="fa fa-chevron-left"></i> Linux-Mosh安装
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
         
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/Linux-Mosh/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Isabella Ling">
-      <meta itemprop="description" content="沉迷学习，日渐消瘦～(｡ì _ í｡)～">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="荼荼小蘼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/20/Linux-Mosh/" class="post-title-link" itemprop="url">Linux-Mosh安装</a>
-          
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-08-20 19:34:40" itemprop="dateCreated datePublished" datetime="2019-08-20T19:34:40+08:00">2019-08-20</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-04 15:05:10" itemprop="dateModified" datetime="2019-09-04T15:05:10+08:00">2019-09-04</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Mosh，又名Mobile Shell，是交互式终端ssh的替代品。</p>
-<p>与ssh相比，mosh的优势如下：</p>
-<ul>
-<li>在wifi与蜂窝数据间任意切换网络，mosh连接不受影响。</li>
-<li>永远保持连接。计算机随时可以休眠，重新唤醒后，mosh连接完好无损， 除非你手动把进程kill掉。 </li>
-<li>无网络延迟。在你打字的时候，ssh会等待服务器的响应。而mosh正好相反，不管是在输入、删除还是编辑行，mosh都会即时响应，让你有种丝般顺滑的感觉。</li>
-</ul>
-<h2 id="mosh运行原理"><a href="#mosh运行原理" class="headerlink" title="mosh运行原理"></a>mosh运行原理</h2><p>mosh包含两个程序，mosh-client和mosh-server。客户端与服务端都需要安装mosh，但不需要手动启动mosh-client或者mosh-server，因为每次使用mosh，这两个程序都是自动启动的。</p>
-<p><strong><em>默认情况下，mosh会通过ssh连接到服务器，然后在服务端启动mosh-server。接着他关闭ssh连接，在客户端启动mosh-client并通过UDP连接上服务器。</em></strong></p>
-<p>之后这个连接一直存在，用户可以通过mosh做以前ssh能做的一切操作。除非mosh-client被kill掉，这个连接会一直保持，不管网络掉线还是客户端异常。</p>
-<p>ps. mosh使用的是60000到61000的端口。</p>
-<h2 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h2><p>ps. 本文只针对CentOS系统，其他系统的安装请参考<a href="https://mosh.org/" target="_blank" rel="noopener">mosh官网</a></p>
-<p>CentOS下，最快的安装方式是使用yum。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mosh</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/Linux-Mosh/install-mosh-failed.jpg" alt><br>如果提示无法匹配，那么你需要扩展yum源，安装epel库。</p>
-<h3 id="扩展yum源"><a href="#扩展yum源" class="headerlink" title="扩展yum源"></a>扩展yum源</h3><ol>
-<li><p>首先，确认你的CentOS版本。不同系统版本对应的epel库不一样。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/Linux-Mosh/sys-version.jpg" alt></p>
-</li>
-<li><p>安装epel库。笔者的操作系统是CentOS 7，所以需执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre></td></tr></table></figure>
-
-<p>其他版本的CentOS系统可在<a href="https://fedoraproject.org/wiki/EPEL" target="_blank" rel="noopener">EPEL wiki</a>获取到相应命令。</p>
-</li>
-<li><p>启用epel库。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启用epel库</span></span><br><span class="line">yum-config-manager --<span class="built_in">enable</span> epel</span><br><span class="line"><span class="comment"># 刷新仓库缓存</span></span><br><span class="line">yum clean all &amp;&amp; yum makecache</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看已启用的仓库列表。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum repolist</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/Linux-Mosh/yum-repolist.jpg" alt></p>
-</li>
-<li><p>现在可以安装mosh啦，安装后无需手动启动。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mosh</span><br></pre></td></tr></table></figure>
-
-<p><img src="/images/Linux-Mosh/install-mosh.jpg" alt><br>安装成功，现在去客户端尝试连接吧～</p>
-</li>
-</ol>
-<h2 id="如何运行"><a href="#如何运行" class="headerlink" title="如何运行"></a>如何运行</h2><ol>
-<li><p>如果你没有修改过ssh的端口，只需在客户端执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mosh root@203.109.86.12</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果已修改ssh端口，则需通过-P指定ssh的端口（注意-P是大写哦～(｡ì _ í｡)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mosh -P 29806 root@203.109.86.12</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>mosh也并不全是优点，他有个bug，输出超过一屏时，只显示最后一屏的内容，不支持回滚。所以需要查看全部输出时，可在命令后加上”| less”来翻页查看。</p>
-<p>不过这个问题跟永不掉线和丝般顺滑比起来，真的无伤大雅了。</p>
-<p>听说这个问题会在新版本修复，敬请期待吧。。</p>
-<p>最后的最后，推荐一个app呀，ios的Blink，可以连接服务器，而且支持mosh哟，每次mosh连上服务器后，不管ipad待机多久，都不用担心掉线，随时打开随时用，感觉真的棒极啦～</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
   </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
-
-  
 
 
           </div>
@@ -504,6 +389,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -516,6 +406,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#文件系统"><span class="nav-number">1.</span> <span class="nav-text">文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#处理文件"><span class="nav-number">1.1.</span> <span class="nav-text">处理文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理目录"><span class="nav-number">1.2.</span> <span class="nav-text">处理目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看文件内容"><span class="nav-number">1.3.</span> <span class="nav-text">查看文件内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#处理文件数据"><span class="nav-number">1.4.</span> <span class="nav-text">处理文件数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩和归档"><span class="nav-number">1.5.</span> <span class="nav-text">压缩和归档</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#进程管理"><span class="nav-number">2.</span> <span class="nav-text">进程管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#磁盘管理"><span class="nav-number">3.</span> <span class="nav-text">磁盘管理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#环境变量"><span class="nav-number">4.</span> <span class="nav-text">环境变量</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他常用"><span class="nav-number">5.</span> <span class="nav-text">其他常用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#近期使用的命令列表"><span class="nav-number">5.1.</span> <span class="nav-text">近期使用的命令列表</span></a></li></ol></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
