@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>荼荼小蘼</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-08-20T12:37:00.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Isabella Ling</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/08/20/hello-world/"/>
+    <id>http://yoursite.com/2019/08/20/hello-world/</id>
+    <published>2019-08-20T12:37:00.000Z</published>
+    <updated>2019-08-20T12:37:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-Mosh安装</title>
+    <link href="http://yoursite.com/2019/08/20/Linux-Mosh/"/>
+    <id>http://yoursite.com/2019/08/20/Linux-Mosh/</id>
+    <published>2019-08-20T11:34:40.000Z</published>
+    <updated>2019-09-04T07:05:10.531Z</updated>
+    
+    <content type="html"><![CDATA[<p>Mosh，又名Mobile Shell，是交互式终端ssh的替代品。</p><p>与ssh相比，mosh的优势如下：</p><ul><li>在wifi与蜂窝数据间任意切换网络，mosh连接不受影响。</li><li>永远保持连接。计算机随时可以休眠，重新唤醒后，mosh连接完好无损， 除非你手动把进程kill掉。 </li><li>无网络延迟。在你打字的时候，ssh会等待服务器的响应。而mosh正好相反，不管是在输入、删除还是编辑行，mosh都会即时响应，让你有种丝般顺滑的感觉。</li></ul><h2 id="mosh运行原理"><a href="#mosh运行原理" class="headerlink" title="mosh运行原理"></a>mosh运行原理</h2><p>mosh包含两个程序，mosh-client和mosh-server。客户端与服务端都需要安装mosh，但不需要手动启动mosh-client或者mosh-server，因为每次使用mosh，这两个程序都是自动启动的。</p><p><strong><em>默认情况下，mosh会通过ssh连接到服务器，然后在服务端启动mosh-server。接着他关闭ssh连接，在客户端启动mosh-client并通过UDP连接上服务器。</em></strong></p><p>之后这个连接一直存在，用户可以通过mosh做以前ssh能做的一切操作。除非mosh-client被kill掉，这个连接会一直保持，不管网络掉线还是客户端异常。</p><p>ps. mosh使用的是60000到61000的端口。</p><h2 id="如何安装"><a href="#如何安装" class="headerlink" title="如何安装"></a>如何安装</h2><p>ps. 本文只针对CentOS系统，其他系统的安装请参考<a href="https://mosh.org/" target="_blank" rel="noopener">mosh官网</a></p><p>CentOS下，最快的安装方式是使用yum。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mosh</span><br></pre></td></tr></table></figure><p><img src="/images/Linux-Mosh/install-mosh-failed.jpg" alt><br>如果提示无法匹配，那么你需要扩展yum源，安装epel库。</p><h3 id="扩展yum源"><a href="#扩展yum源" class="headerlink" title="扩展yum源"></a>扩展yum源</h3><ol><li><p>首先，确认你的CentOS版本。不同系统版本对应的epel库不一样。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/redhat-release</span><br></pre></td></tr></table></figure><p><img src="/images/Linux-Mosh/sys-version.jpg" alt></p></li><li><p>安装epel库。笔者的操作系统是CentOS 7，所以需执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</span><br></pre></td></tr></table></figure><p>其他版本的CentOS系统可在<a href="https://fedoraproject.org/wiki/EPEL" target="_blank" rel="noopener">EPEL wiki</a>获取到相应命令。</p></li><li><p>启用epel库。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启用epel库</span></span><br><span class="line">yum-config-manager --<span class="built_in">enable</span> epel</span><br><span class="line"><span class="comment"># 刷新仓库缓存</span></span><br><span class="line">yum clean all &amp;&amp; yum makecache</span><br></pre></td></tr></table></figure></li><li><p>查看已启用的仓库列表。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum repolist</span><br></pre></td></tr></table></figure><p><img src="/images/Linux-Mosh/yum-repolist.jpg" alt></p></li><li><p>现在可以安装mosh啦，安装后无需手动启动。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mosh</span><br></pre></td></tr></table></figure><p><img src="/images/Linux-Mosh/install-mosh.jpg" alt><br>安装成功，现在去客户端尝试连接吧～</p></li></ol><h2 id="如何运行"><a href="#如何运行" class="headerlink" title="如何运行"></a>如何运行</h2><ol><li><p>如果你没有修改过ssh的端口，只需在客户端执行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mosh root@203.109.86.12</span><br></pre></td></tr></table></figure></li><li><p>如果已修改ssh端口，则需通过-P指定ssh的端口（注意-P是大写哦～(｡ì _ í｡)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mosh -P 29806 root@203.109.86.12</span><br></pre></td></tr></table></figure></li></ol><h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>mosh也并不全是优点，他有个bug，输出超过一屏时，只显示最后一屏的内容，不支持回滚。所以需要查看全部输出时，可在命令后加上”| less”来翻页查看。</p><p>不过这个问题跟永不掉线和丝般顺滑比起来，真的无伤大雅了。</p><p>听说这个问题会在新版本修复，敬请期待吧。。</p><p>最后的最后，推荐一个app呀，ios的Blink，可以连接服务器，而且支持mosh哟，每次mosh连上服务器后，不管ipad待机多久，都不用担心掉线，随时打开随时用，感觉真的棒极啦～</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Mosh，又名Mobile Shell，是交互式终端ssh的替代品。&lt;/p&gt;
+&lt;p&gt;与ssh相比，mosh的优势如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在wifi与蜂窝数据间任意切换网络，mosh连接不受影响。&lt;/li&gt;
+&lt;li&gt;永远保持连接。计算机随时可以休眠，重新唤醒后，mo
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="mosh" scheme="http://yoursite.com/tags/mosh/"/>
+    
+      <category term="ssh" scheme="http://yoursite.com/tags/ssh/"/>
+    
+  </entry>
+  
+</feed>
